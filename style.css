@@ -1,0 +1,18 @@
+*{margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+:root {
+--dark-bg:#0a0a0a;
+--darker-bg: #ffffff;
+--acent: #8b0404;
+--acent-glow: #df5959;
+--text: #f1b3b3;
+}
+body{
+background-color: #df5959;
+color: #8b0404;
+line-height: 1.6;
+overflow-x: hidden;
+}
