@@ -1,64 +1,156 @@
-*{margin:0;
-padding:0;
-box-sizing: border-box;
-font-family: 'Segoe UI', sans-serif;
-}
-:root {
---dark-bg:#0a0a0a;
---darker-bg: #ffffff;
---acent: #8b0404;
---acent-glow: #df5959;
---text: #f1b3b3;
-}
-body{
-background-color: #df5959;
-color: #8b0404;
-line-height: 1.6;
-overflow-x: hidden;
-}
-/* navigation */
-.navbar {
-    position: inherit;
+/*algumas partes tiveram uma ajudinha do chat gpt*/
+ /*Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  :root {
+    --dark-bg: #0a0a0a;
+    --light-bg: #ffffff;
+    --accent: #8b0404;
+    --accent-glow: #df5959;
+    --text-color: #f1b3b3;
+  }
+  
+  body {
+    background-color: var(--accent-glow);
+    color: var(--accent);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Navegação */
+  .navbar {
+    position: sticky;
     top: 0;
     width: 100%;
     padding: 1.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f1b3b3;
+    background-color: var(--text-color);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid #8b0404;
-}
-
-.logo {
-    font-size: medium;
+    border-bottom: 1px solid var(--accent);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--acent);
+    color: var(--accent);
     text-decoration: none;
+  }
+  
+  /* Links da navegação */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
     position: relative;
-    padding-left: 2.5rem;
-}
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-glow);
+    transition: 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+    flex-wrap: wrap;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    margin: 1rem 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition:background0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: var(--dark-bg);
+  }
+  
+  .hero-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .profile-img {
+    max-width: 250px;
+    border-radius: 15px;
+  }
+  
+  /* Seção de Skills */
+  .skills {
+    padding: 4rem 5%;
+    background-color: var(--light-bg);
+    color: var(--dark-bg);
+    text-align: center;
+  }
+  
+  .skills h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .skills-card {
+    background: #fff;
+    border: 1px solid var(--accent);
+    padding: 2rem;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
 
-.nav-links a {
-color: #8b0404;
-text-decoration: none;
-font-weight: 500;
-transition: all 0.3s ease;
-position: relative;
-}
-
-.nav-links a::after {
-content: 'sim';
-position: absolute;
-bottom: -5px;
-left: 0;
-width: 0;
-height: 2px;
-background: #df5959;
-transition: 0.3s ease;
-}
-
-.nav-links a:hover::after {
-width: 100%;
-}
+ 
